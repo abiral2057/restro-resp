@@ -103,7 +103,7 @@ function showPosition(position) {
   // document.getElementById("gps").innerHTML=
   // `<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24147.44170610748!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sne!2snp!4v1709747558674!5m2!1sne!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
 
-  document.getElementById("gps").innerText="https://www.google.com/maps/@"+latitude+","+longitude;
+  document.getElementById("gps").innerText="https://www.google.com/maps/@"+latitude+","+longitude+",14z/data=!5m1!1e2?entry=ttu";
 
 }
 
@@ -157,6 +157,7 @@ function whatsapp(){
 
   var url = "https://wa.me/9779816232444?text="+"----Billing information ----"+"%0a"+"Name :"+name1+"%0a"+"Address :"+address1+"%0a"+
   "Phone :"+phonenumber1+"%0a"+"----Take My ORDER ----"+"%0a"+"Selected Dish : "+"%0a"+cartitem1+"%0a"+totals1+"%0a"+"Delivery location :"+gps1;
+  console(gps1);
  if(gps1==""||name1==""||phonenumber1==""){
   alert('Please complete form');
 }else{
