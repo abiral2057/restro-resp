@@ -4,7 +4,13 @@ body {
   padding: 0;
   background-color: #f8f8f8;
 }
-
+.cart img{
+  max-width: 100%;
+  height: auto;
+  width: 12%;
+  display: inline;
+  margin-right: 5px;
+}
 header {
   background-color: #e30f0f;
   color: #fff;

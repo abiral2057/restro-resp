@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const itemName = this.getAttribute('data-name');
       const itemPrice = parseFloat(this.getAttribute('data-price'));
       const itemQuantity = parseInt(this.parentNode.querySelector('.quantity-input').value);
+      const itemImage = this.getAttribute('data-image');
       
       // Check if product already exists in cart
       if (cartProducts.includes(itemName)) {
@@ -20,9 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
       total += itemPrice * itemQuantity;
       updateTotal();
       const listItem = document.createElement('li');
-      listItem.textContent = `${itemName} x ${itemQuantity} - रु ${(itemPrice * itemQuantity).toFixed(2)}/-`;
+      listItem.innerHTML = `<img src="${itemImage}" alt="${itemName}"> ${itemName} - ${itemQuantity} - रु ${(itemPrice * itemQuantity).toFixed(2)}/-`;
       cartItems.appendChild(listItem);
       cartProducts.push(itemName); // Add product to cartProducts array
+      
     });
   });
 
