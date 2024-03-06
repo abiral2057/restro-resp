@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+header {
+  background-color: #e30f0f;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.tab {
+  overflow: hidden;
+  background-color: #f2f2f2;
+  margin-bottom: 20px;
+}
+
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: calc(50% - 20px); /* Adjusted width for two items per row */
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.item h2 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.item p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.quantity button {
+  background-color: #ddd;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.quantity button:hover {
+  background-color: #ccc;
+}
+
+.cart {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.cart:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.cart button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.cart button:hover {
+  background-color: #555;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
