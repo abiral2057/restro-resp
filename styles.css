@@ -4,6 +4,15 @@ body {
   padding: 0;
   background-color: #f8f8f8;
 }
+
+
+.add-to-cart{
+  font-size: 18px;
+  font-style: unset;
+ 
+  color: #913939;
+  margin-top: 5px;
+}
 .cart img{
   max-width: 100%;
   height: auto;
