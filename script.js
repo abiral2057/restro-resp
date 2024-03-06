@@ -157,7 +157,7 @@ function whatsapp(){
 
   var url = "https://wa.me/9779816232444?text="+"----Billing information ----"+"%0a"+"Name :"+name1+"%0a"+"Address :"+address1+"%0a"+
   "Phone :"+phonenumber1+"%0a"+"----Take My ORDER ----"+"%0a"+"Selected Dish : "+"%0a"+cartitem1+"%0a"+totals1+"%0a"+"Delivery location :"+gps1;
-  console(gps1);
+ 
  if(gps1==""||name1==""||phonenumber1==""){
   alert('Please complete form');
 }else{
