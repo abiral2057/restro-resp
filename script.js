@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Product already in cart');
         return;
       }
+      if(itemQuantity==0){
+        alert('Please enter a valid quantity');
+        return;
+      }
 
       total += itemPrice * itemQuantity;
       updateTotal();
@@ -165,3 +169,5 @@ function whatsapp(){
  }
   
 }
+
+
