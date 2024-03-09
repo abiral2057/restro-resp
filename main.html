@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart</title>
+  <title>Chills</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+ 
 </head>
 <body>
   <header style="display: flex;
@@ -15,6 +16,8 @@
   <img src="cutlery.png" width="90" height="50" alt="chills"><span style="padding: 15px;font-weight: bold;
   font-size: 40px;">Chills</span>
   </header>
+ 
+
   <div class="tab">
     <button class="tablinks active" onclick="openTab(event, 'category1')">Non-Veg</button>
     <button class="tablinks" onclick="openTab(event, 'category2')">Vegetarian</button>
@@ -28,7 +31,7 @@
         <p>रु300/-</p>
         <div class="quantity">
           <button class="decrement">-</button>
-          <input type="number" class="quantity-input" value="1" min="1">
+          <input type="number" class="quantity-input" value="0" min="1" >
           <button class="increment">+</button>
         </div>
         <button class="add-to-cart" data-name="Chicken Khaja Set" data-price="300" data-image="image/1.PNG">Add to Cart</button>
@@ -41,7 +44,7 @@
         <p>रु400/-</p>
         <div class="quantity">
           <button class="decrement">-</button>
-          <input type="number" class="quantity-input" value="1" min="1">
+          <input type="number" class="quantity-input" value="0" min="1">
           <button class="increment">+</button>
         </div>
         <button class="add-to-cart" data-name="Mutton Khaja Set" data-price="400" data-image="image/2.PNG">Add to Cart</button>
@@ -59,7 +62,7 @@
         <p>रु350/-</p>
         <div class="quantity">
           <button class="decrement">-</button>
-          <input type="number" class="quantity-input" value="1" min="1">
+          <input type="number" class="quantity-input" value="0" min="1">
           <button class="increment">+</button>
         </div>
         <button class="add-to-cart" data-name="Panir Biryani" data-price="350" data-image="image/3.PNG">Add to Cart</button>
@@ -71,7 +74,7 @@
         <p>रु350/-</p>
         <div class="quantity">
           <button class="decrement">-</button>
-          <input type="number" class="quantity-input" value="1" min="1">
+          <input type="number" class="quantity-input" value="0" min="1">
           <button class="increment">+</button>
         </div>
         <button class="add-to-cart" data-name="Veg Pulawu" data-price="350" data-image="image/4.PNG">Add to Cart</button>
@@ -83,7 +86,7 @@
         <p>रु90/-</p>
         <div class="quantity">
           <button class="decrement">-</button>
-          <input type="number" class="quantity-input" value="1" min="1">
+          <input type="number" class="quantity-input" value="0" min="1">
           <button class="increment">+</button>
         </div>
         <button class="add-to-cart" data-name="Samosa Tarkari" data-price="90" data-image="image/6.PNG">Add to Cart</button>
@@ -95,7 +98,7 @@
         <p>रु150/-</p>
         <div class="quantity">
           <button class="decrement">-</button>
-          <input type="number" class="quantity-input" value="1" min="1">
+          <input type="number" class="quantity-input" value="0" min="1">
           <button class="increment">+</button>
         </div>
         <button class="add-to-cart" data-name="Chaat" data-price="150" data-image="image/4.PNG">Add to Cart</button>
@@ -108,7 +111,8 @@
 
   <div id="cart" class="tabcontent">
     <div class="cart">
-      <h2>Cart</h2>
+    
+      <h2>Cart <img src="image/chef-removebg-preview.png"></h2>
       <ul id="cart-items">
         <!-- Cart items will be added dynamically -->
       </ul>
@@ -117,8 +121,7 @@
       <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"  type="button">
         Check Out
       </button>
-
-
+   
       
     </div>
   </div>
@@ -132,10 +135,7 @@
   <div class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
     <div class="grid h-full max-w-lg grid-cols-3 mx-auto" style="background: #e30f0f; border-radius: 20px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
        
-      <!-- <button data-tooltip-target="tooltip-home" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
-           <div>Total:</div>
-       
-        </button> -->
+
       
 
         <button data-tooltip-target="tooltip-wallet" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
@@ -170,7 +170,9 @@ height: 70px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0
        
         <button   data-tooltip-target="tooltip-profile" type="button" class="inline-flex flex-col items-center justify-center px-5  hover:bg-gray-500 dark:hover:bg-gray-80 group">
           <div style="color: antiquewhite;
-          font-weight: bold;" class="tablinks" onclick="openTab(event, 'cart')"  >Continue</div>
+          font-weight: bold;" class="tablinks" onclick="openTab(event, 'cart')"  >Continue                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" style="color: white;"/>
+                    </svg></div>
            
         </button>
        
@@ -193,8 +195,14 @@ height: 70px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                    Billing information
+              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" style="margin: 5px;
+              padding-bottom: 2px;
+              color: crimson;">
+                <path fill-rule="evenodd" d="M14 7h-4v3a1 1 0 1 1-2 0V7H6a1 1 0 0 0-1 1L4 19.7A2 2 0 0 0 6 22h12c1 0 2-1 2-2.2L19 8c0-.5-.5-.9-1-.9h-2v3a1 1 0 1 1-2 0V7Zm-2-3a2 2 0 0 0-2 2v1H8V6a4 4 0 1 1 8 0v1h-2V6a2 2 0 0 0-2-2Z" clip-rule="evenodd"/>
+              </svg>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                 
+                     Billing information 
                 </h3>
                 <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -230,9 +238,12 @@ height: 70px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0
                         <textarea disabled required id="gps" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Gps"></textarea>                    
                     </div>
                 </div>
-                <button onclick="whatsapp()" type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                <button onclick="whatsapp()" type="submit" class="text-white inline-flex items-center bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-blue-800" style="font-weight: bold;
+                font-size: 15px;">
                     Submit
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" style="color: white;"/>
+                    </svg>
                 </button>
 
                
@@ -244,6 +255,7 @@ height: 70px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0
 
 
             </form>
+            
         </div>
     </div>
 </div> 
