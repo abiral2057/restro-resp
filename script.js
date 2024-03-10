@@ -156,9 +156,13 @@ function whatsapp(){
   var cartitem1= document.getElementById("cart-items").innerText;
   var totals1= document.getElementById("total").innerText;
   var gps1 =  document.getElementById("gps").value;
-  console.log(gps1);
+  var product = document.getElementsByClassName("cart-items");
+ 
 
-
+if(product.length == 0){
+  alert("Add Some Product in cart");
+}
+else{
   var url = "https://wa.me/9779816232444?text="+"----Billing information ----"+"%0a"+"Name :"+name1+"%0a"+"Address :"+address1+"%0a"+
   "Phone :"+phonenumber1+"%0a"+"----Take My ORDER ----"+"%0a"+"Selected Dish : "+"%0a"+cartitem1+"%0a"+totals1+"%0a"+"Delivery location :"+gps1;
  
@@ -169,5 +173,5 @@ function whatsapp(){
  }
   
 }
-
+}
 
